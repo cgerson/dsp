@@ -18,6 +18,14 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
+    s = "Number of donuts: "
+    n = str(count)
+
+    if count >=10:
+        n = 'many'
+
+    return s+n
+
     raise NotImplementedError
 
 
@@ -37,6 +45,13 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
+    result = ""
+
+    if len(s)>=2:
+        result = s[0]+s[1]+s[-2]+s[-1]
+
+    return result
+
     raise NotImplementedError
 
 
@@ -56,6 +71,17 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
+    first = s[0]
+    result = []
+
+    for i in range(len(s)):
+        if s[i] == first and i!=0:
+            result.append('*')
+        else:
+            result.append(s[i])
+            
+    return "".join(result)
+
     raise NotImplementedError
 
 
@@ -74,6 +100,11 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
+    new_a = b[:2]+a[2:]
+    new_b = a[:2]+b[2:]
+
+    return new_a+" "+new_b
+    
     raise NotImplementedError
 
 
@@ -91,11 +122,23 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
+    result=s
+    if len(s)>=3:
+        if s[-3:]=='ing':
+            result+='ly'
+        else:
+            result+='ing'
+
+    return result
+    
     raise NotImplementedError
 
 
 def not_bad(s):
     """
+
+    ALMOST! NOT FINISHED
+
     Given a string, find the first appearance of the substring 'not'
     and 'bad'. If the 'bad' follows the 'not', replace the whole
     'not'...'bad' substring with 'good'. Return the resulting string.
@@ -111,6 +154,21 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
+
+    s_list = s.split()
+    result = s
+    
+    if s_list.count('not')>0 and s_list.count('bad')>0:
+        index_not = s_list.index('not')
+        index_bad = s_list.index('bad')
+        if index_not < index_bad:
+            if index_bad != len(s_list)-1:
+                result = " ".join(s_list[:index_not])+' good '+" ".join(s_list[index_bad+1:])
+            else:
+                result = " ".join(s_list[:index_not])+' good'
+                
+    return result
+
     raise NotImplementedError
 
 
@@ -130,4 +188,20 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
+
+    result = a+b
+    
+    if(len(a)>1 and len(b)>1):
+        a_split_index = len(a)/2 if len(a)%2==0 else (len(a)+1)/2
+        b_split_index = len(b)/2 if len(b)%2==0 else (len(b)+1)/2
+    
+        a_front = a[:a_split_index]
+        b_front = b[:b_split_index]
+        a_back = a[a_split_index:]
+        b_back = b[b_split_index:]
+    
+        result = a_front + b_front + a_back + b_back
+
+    return result
+    
     raise NotImplementedError
