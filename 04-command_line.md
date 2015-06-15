@@ -21,7 +21,7 @@ REPLACE THIS TEXT WITH YOUR RESPONSE
 
 What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations of those flags are meaningful?
 
-REPLACE THIS TEXT WITH YOUR RESPONSE
+'ls' lists the files in the current directory. The '-a' flag makes sure to include all files, even if they are hidden. The '-l' flag shows files in long-list format (printing more information on the file such as permissions to read/write/execute, number of links, owner, modified date, etc, as opposed to just the file names). The '-lh' flag prints the same info as '-l', but prints the size of the file in human readable format (3.2K instead of 3200). To print details about all files in long-list form and with human-readable sizes, including hidden files, you can combine flags: 'ls -a -lh'. 
 
 ---
 
