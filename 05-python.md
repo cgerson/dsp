@@ -75,13 +75,14 @@ And we want to filter out names beginning with 'C'. We can apply the filter() fu
 Alternatively, we can use list comprehension to obtain the same result:
 > [x for x in names if x[0]=='C']
 
-Set comprehensions work the same as list comprehension, but return a set. Dictionary comprehensions can be created from a list using comprehension, for example, given seq1 = [1,2,3] and seq2 = ['cat','dog','bird'], we can make this dictionary with elements of seq1 as keys and their square as the value:
+Set comprehensions work the same as list comprehensions, but return a set. Dictionary comprehensions can be created from a list using comprehension, for example, given seq1 = [1,2,3] and seq2 = ['cat','dog','bird'], we can make this dictionary with elements of seq1 as keys and their square as the value:
 > {x: x**2 for x in seq}
 
 Or elements of seq1 as keys and elements of seq2 as values:
 > {x: y for x in seq1 for y in seq2}
 
 List comprehension creates more readable and compact code, and therefore may be preferible to map() and filter(). 
+
 ---
 
 
