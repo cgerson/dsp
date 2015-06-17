@@ -44,9 +44,9 @@ Finding elements in sets is faster than in lists, because sets are implemented u
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
 'lambda' functions are anonymous functions constructed at runtime. Let's say we have a list of tuples with book titles and years published:
->>> books = [("Infinite Jest",1996),("Foundation",1951),("The Martian Chronicles",1950)]
+* >>> books = [("Infinite Jest",1996),("Foundation",1951),("The Martian Chronicles",1950)]
 And we want to sort by year. We can call the sorted() function and use 'lambda' in the 'key' argument like so:
->>> sorted(books,key=lambda book: book[1])
+* >>> sorted(books,key=lambda book: book[1])
 Where book[1] references the index of the year in each tuple.
 
 
