@@ -81,7 +81,7 @@ Set comprehensions work the same as list comprehension, but return a set. Dictio
 Or elements of seq1 as keys and elements of seq2 as values:
 > {x: y for x in seq1 for y in seq2}
 
-
+List comprehension creates more readable and compact code, and therefore may be preferible to map() and filter(). 
 ---
 
 
