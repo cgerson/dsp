@@ -43,13 +43,13 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
-'lambda' functions are anonymous functions constructed at runtime. Let's say we have a list of tuples with book titles and years published:
+> 'lambda' functions are anonymous functions constructed at runtime. Let's say we have a list of tuples with book titles and years published:
 > books = [("Infinite Jest",1996),("Foundation",1951),("The Martian Chronicles",1950)]
 
-And we want to sort by year. We can call the sorted() function and use 'lambda' in the 'key' argument like so:
+> And we want to sort by year. We can call the sorted() function and use 'lambda' in the 'key' argument like so:
 > sorted(books,key=lambda book: book[1])
 
-Where book[1] references the index of the year in each tuple.
+> Where book[1] references the index of the year in each tuple.
 
 
 ---
@@ -59,29 +59,29 @@ Where book[1] references the index of the year in each tuple.
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
-List comprehensions are a way to create lists in Python. It is an alternative to using lambda, map() and filter(). 
+> List comprehensions are a way to create lists in Python. It is an alternative to using lambda, map() and filter(). 
 
-Map(): In my answer to the first question above, I noted that map() could be used to apply function fun to sequence seq with map(fun, seq) to create a new list. We can do the same with list comprehension:
+> Map(): In my answer to the first question above, I noted that map() could be used to apply function fun to sequence seq with map(fun, seq) to create a new list. We can do the same with list comprehension:
 > [x**2 for x in seq]
 
-Where our function is x**2. In this example, we go through every element x in sequence seq and generate the square. 
+> Where our function is x**2. In this example, we go through every element x in sequence seq and generate the square. 
 
-Filter(): The filter() function is used to filter out certain elements of a list. For example, say we have a list names:
+> Filter(): The filter() function is used to filter out certain elements of a list. For example, say we have a list names:
 > names = ['Claire','Cathy','Hannah','Kevin','Chris']
 
-And we want to filter out names beginning with 'C'. We can apply the filter() function as such:
+> And we want to filter out names beginning with 'C'. We can apply the filter() function as such:
 > filter(lambda x: x[0]=='C',names)
 
-Alternatively, we can use list comprehension to obtain the same result:
+> Alternatively, we can use list comprehension to obtain the same result:
 > [x for x in names if x[0]=='C']
 
-Set comprehensions work the same as list comprehensions, but return a set. Dictionary comprehensions can be created from a list using comprehension, for example, given seq1 = [1,2,3] and seq2 = ['cat','dog','bird'], we can make this dictionary with elements of seq1 as keys and their square as the value:
+> Set comprehensions work the same as list comprehensions, but return a set. Dictionary comprehensions can be created from a list using comprehension, for example, given seq1 = [1,2,3] and seq2 = ['cat','dog','bird'], we can make this dictionary with elements of seq1 as keys and their square as the value:
 > {x: x**2 for x in seq}
 
-Or elements of seq1 as keys and elements of seq2 as values:
+> Or elements of seq1 as keys and elements of seq2 as values:
 > {x: y for x in seq1 for y in seq2}
 
-List comprehension creates more readable and compact code, and therefore may be preferible to map() and filter(). 
+> List comprehension creates more readable and compact code, and therefore may be preferible to map() and filter(). 
 
 ---
 
