@@ -12,6 +12,46 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
+pwd - print working directory
+hostname - my computer's network name
+mkdir - make directory 
+cd - change directory
+ls - list directory
+rmdir - remove directory
+pushd - push directory, pushes it into a list then changed directory
+popd - pop directory, takes list directory you pushed and takes you back there
+cp - copy a file or dir
+mv - move a file or dir
+cat - print the whole file
+xargs - execute arguments
+find - find files
+grep - find things inside files
+man - read a manual page
+apropos - find what man page is appropriate
+env - look at your environment
+echo - print some arguments
+export - export/set a new environment variable
+exit - exit the shell
+sudo - become super user root (careful...)
+chmod - change permission modifiers
+chown - change ownership
+cd .. - moves up in the tree/path
+mkdir -p - makes an entire path even if directories don't exist
+touch - +file name, makes empty file
+cd file1 file2 - copies file1 and names it file2
+cp file1 dir - copies file1 into dir, same name
+cp -r dir1 dir2 - copies contents of dir1 and deposits into newly created dir2
+mv file1 file2 - renames file1 with name file2
+mv dir1 dir2 - renames dir1 with name dir2
+less file - display file (type q to quit display)
+more file - display file (stays in Terminal)
+rm file - removes file
+$|$ - takes output from left and pipes it to the command on the right
+$<$ - the < will take and send the input from the file on the right to the program on the left
+$>$ - the > takes the output of the command on the left, then writes it to the file on the right
+$>>$ - the >> takes the output of the cmd on the left, then appends it to the file on the right
+* - wildcard
+
 ---
 
 
