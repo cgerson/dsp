@@ -18,7 +18,7 @@ These exercises are implemented with doctests, which are runnable tests inside d
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
-Both lists and tuples are data structures that hold values separated by commas. Tuples however are immutable, or rather their value is fixed. It's been noted then that the difference is also semantic: due to the immutability of tuples, one would expect different kinds of information in each one. Tuples can be used as keys in dictionaries, while lists cannot. An error would result if the list as key is modified, because its modification would change the hash value used to look up the value, and therefore its value would not be retrievable. 
+> Both lists and tuples are data structures that hold values separated by commas. Tuples however are immutable, or rather their value is fixed. It's been noted then that the difference is also semantic: due to the immutability of tuples, one would expect different kinds of information in each one. Tuples can be used as keys in dictionaries, while lists cannot. An error would result if the list as key is modified, because its modification would change the hash value used to look up the value, and therefore its value would not be retrievable. 
 
 ---
 
@@ -27,13 +27,13 @@ Both lists and tuples are data structures that hold values separated by commas. 
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
-Lists and sets are both data types that hold elements in Python. Both can be modified (unless set is initalized as a frozenset). Both can have functions applied to elements, for example, map(fun, seq) applies function fun to every element in seq. Both can hold elements of different data types. However, lists are sequence objects, in which every element is indexed, while sets are unordered collections of unique values and can be used as keys in dictionaries. 
+> Lists and sets are both data types that hold elements in Python. Both can be modified (unless set is initalized as a frozenset). Both can have functions applied to elements, for example, map(fun, seq) applies function fun to every element in seq. Both can hold elements of different data types. However, lists are sequence objects, in which every element is indexed, while sets are unordered collections of unique values and can be used as keys in dictionaries. 
 
-Lists are the most basic type of sequence in Python. They can hold duplicate values, and can access built-in methods such as index(), insert(), and sort(), for example, with list a where a = ['test','test',1,2,3], we can insert element 'inserted' at index 1 with a.insert(1,'inserted').
+> Lists are the most basic type of sequence in Python. They can hold duplicate values, and can access built-in methods such as index(), insert(), and sort(), for example, with list a where a = ['test','test',1,2,3], we can insert element 'inserted' at index 1 with a.insert(1,'inserted').
 
-Sets hold only unique values, ordered in an arbitrary manner, and can be used to perform mathematical operations between sets such as intersections (for sets a and b, >>> a&b) and unions (>>> a|b). 
+> Sets hold only unique values, ordered in an arbitrary manner, and can be used to perform mathematical operations between sets such as intersections (for sets a and b, >>> a&b) and unions (>>> a|b). 
 
-Finding elements in sets is faster than in lists, because sets are implemented using hash tables, while lists are not.  
+> Finding elements in sets is faster than in lists, because sets are implemented using hash tables, while lists are not.  
 
 
 ---
