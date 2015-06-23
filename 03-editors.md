@@ -31,7 +31,7 @@ Both Emacs and vim have built-in interactive tutorials that you can try.
 
 What terminal editor will you use? How did you make your decision?
 
-REPLACE THIS TEXT WITH YOUR RESPONSE
+I will use Emacs. I chose Emacs because it was the editor initially recommended. 
 
 ---
 
@@ -61,6 +61,6 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
-REPLACE THIS TEXT WITH YOUR RESPONSE
+I am planning to use Emacs as my graphical editor as well. Emacs may have a steep learning curve but I appreciate that once I learn the relevant commands I can work quickly via keyboard only. I'm enjoying the split screen function (to have multiple buffers open at once), and as I advance with it, I know that creating macros will be very helpful. Have not yet needed to customize the environment yet. 
 
 ---
