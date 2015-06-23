@@ -26,7 +26,7 @@
     thinkplot.Show(xlabel='numbers',ylabel='CDF')
 
 ###### Pmf graph shows equal probability for every number
-<img src = "files/Images/Ex4-2_figure_1.png">
+<img src = "Images/Ex4-2_figure_1.png">
 
 ###### Cdf graph shows a linear line with slope 1
-<img src = "files/Images/Ex4-2_figure_2.png">
+<img src = "Images/Ex4-2_figure_2.png">

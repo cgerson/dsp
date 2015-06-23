@@ -35,7 +35,7 @@
     thinkplot.Cdf(cdf)
     thinkplot.Show()
 
-<img src = "files/Images/Ex5-1_figure_1.png">
+<img src = "Images/Ex5-1_figure_1.png">
 
 ##### Assuming a normal distribution, we can say that 34% [(.829-.486)*100] of men are in the height range of 5'10" and 6'1"
   
