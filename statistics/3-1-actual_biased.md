@@ -16,7 +16,7 @@
     thinkplot.Config(xlabel='Number of children under 18',ylabel='Probability')
     thinkplot.Show()
 
-<img src = "files/Images/Ex3-1_figure_1.png">
+<img src = "Images/Ex3-1_figure_1.png">
 
 ###### Define BiasPmf function
     def BiasPmf(pmf, label=''):
