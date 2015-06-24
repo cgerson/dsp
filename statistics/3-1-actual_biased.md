@@ -56,7 +56,7 @@
 ###### Calculate and print means of both actual and biased pmf distrubutions of number of children under 18 in household
 
     print('Actual mean',pmf.Mean()) 
-###### returns ('Actual mean', 1.0242051550438309)
-
     print('Biased mean',biased_pmf.Mean())
-###### returns ('Biased mean', 2.4036791006642821)
+
+###### Returns ('Actual mean', 1.0242051550438309)
+###### Returns ('Biased mean', 2.4036791006642821)
