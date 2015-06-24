@@ -51,7 +51,7 @@
     thinkplot.Pmfs([pmf,biased_pmf])
     thinkplot.Show(xlabel='Number of biological/adopted/related/legal children under age 18 in household',ylabel='PMF')
 
-<img src = "files/Images/Ex3-1_figure_2.png">
+<img src = "Images/Ex3-1_figure_2.png">
 
 ###### Calculate and print means of both actual and biased pmf distrubutions of number of children under 18 in household
 
