@@ -17,12 +17,12 @@
     men_htm3_std = df_men.htm3.std()
     
 ##### Mean of men's height is 178.1 cm, standard deviation is 7.7 cm
-    print "Mean: " + men_htm3_mean
-    print "Standard deviation: " + men_htm3_std
+    print "Mean: " + str(np.around(men_htm3_mean,2))
+    print "Standard deviation: " + str(np.around(men_htm3_std,2))
 
 ##### Find the cdf of men's heights at 5'10" (177.8 cm) and at 6'1" (185.4 cm)
-    print "CDF of men's height at 177.8 cm: " + scipy.stats.norm(men_htm3_mean,men_htm3_std).cdf(177.8)
-    print "CDF of men's height at 185.4 cm: " + scipy.stats.norm(men_htm3_mean,men_htm3_std).cdf(185.4)
+    print "CDF of men's height at 177.8 cm: " + str(scipy.stats.norm(men_htm3_mean,men_htm3_std).cdf(177.8))
+    print "CDF of men's height at 185.4 cm: " + str(scipy.stats.norm(men_htm3_mean,men_htm3_std).cdf(185.4))
 
 ##### Yields .486 and .829 respectively
 
