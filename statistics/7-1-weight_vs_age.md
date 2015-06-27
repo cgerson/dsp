@@ -14,7 +14,7 @@
     df = df[np.isfinite(df['agepreg'])]
     df = df[np.isfinite(df['totalwgt_lb'])]
     
-##### Assign variables for weight of baby at birth, and age of mother at time of pregnancy
+##### Assign variables for weight of baby at birth, and age of mother at time of birth
     weight,age = df.totalwgt_lb, df.agepreg
     
 ##### Initial scatterplot of birth weight vs mother's age
@@ -23,17 +23,23 @@
 
 <img src = "Images/Ex7-1_figure_1.png">
 
-##### Generate CDF of birthweight
-    cdf_weight = thinkstats2.Cdf(weight)
+##### Bin data by age of mother at time of birth
+    bins = np.arange(0,.5,.05)
+    indices = df.groupy(indices)
+    groups = df.groupby(indices)
     
-##### Find weight percentiles of interest
-##### Result prints: 
-Min, 25th percentile, 50th percentile, 75th percentile, Max: 0.125, 6.5, 7.375, 8.125, 15.4375
-    weight_array = []
-    percentiles = (0,25,50,75,100)
-    for i in percentiles:
-        weight_array.append(thinkstats2.Cdf.Percentile(cdf_weight,i))
-    print 'Min, 25th percentile, 50th percentile, 75th percentile, Max: ' + ", ".join(map(str,weight_array))
+##### Computer mean age and CDF of birthweight
+    ages = [group.agepreg.mean() for i,group in groups]
+    cdfs = [thinkstats2.Cdf.(group.totalwgt_lb) for i,group in groups]
+
+##### Plot percentiles of birthweight versus age
+    for percent in [75,50,25]:
+        weights = [cdf.Percentile(percent) for cdf in cdfs]
+        label = '%dth' % percent
+        thinkplot.Plot(ages,weights,label=label)
+    thinkplot.Show(xlabel='age of mother (in centiyears)',ylabel = 'birthweight')
+    
+<img src = "Images/Ex7-1_figure_3.png">
 
 ##### Compute Pearson's correlation
 ##### Result prints: 
