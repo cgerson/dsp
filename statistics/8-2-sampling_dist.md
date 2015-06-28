@@ -26,7 +26,7 @@
             L = 1/np.mean(xs)
             means.append(L)
 
-        stderr = RMSE(means, lam)
+        stderr = estimation.RMSE(means, lam)
         print('standard error', stderr)
 
         cdf = thinkstats2.Cdf(means)
@@ -35,13 +35,14 @@
         VertLine(ci[0])
         VertLine(ci[1])
 
-        # plot the CDF
         thinkplot.Cdf(cdf)
         thinkplot.Show(root='estimation1',
                    xlabel='sample mean',
                    ylabel='CDF',
                    title='Sampling distribution')
-                   
+
+    SimulateSampleExp()
+    
 ##### Resulting output is:
 standard error 0.8502093486
 confidence interval (1.2682331374299645, 3.7119948331185322)
@@ -68,13 +69,13 @@ confidence interval (1.2682331374299645, 3.7119948331185322)
             means.append(L)
             medians.append(Lm)
 
-        return RMSE(means, lam)
+        return estimation.RMSE(means, lam)
 
 ##### Generated standard errors (std_errs) based on different values of n (n_values)
     n_values = [10,20,40,80,160]
     std_errs = []
     for i in n_values:
-        std_errs.append(estimation.Estimate3_stderror(n=i))
+        std_errs.append(Estimate3_stderror(n=i))
     
 ##### Plot n values vs standard errors
     thinkplot.Plot(n_values,std_errs)
