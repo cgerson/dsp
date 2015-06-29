@@ -27,7 +27,27 @@ Communicate the problem, how you solved it, and the solution, within each of the
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin?
 
-REPLACE THIS TEXT WITH YOUR RESPONSE
+> Probability of fraternal twins (F): 1/125
+
+> Probability of identical twins (I): 1/300
+
+> Probability of male twin (M): 1/2
+
+> Probability of male given identicial (M/I) : 1
+
+> Find: Probability(I/M) = I/2(F+I)
+
+> code: prob_frat_twins = float(1)/125
+
+>       prob_id_twins = float(1)/300
+
+>       prob_male = float(1)/2
+
+>       prob_male_id_twin = (prob_id_twins)/2(prob_frat_twins + prob_id_twins)
+
+>       print prob_male_id_twin
+
+> Result: .353
 
 ---
 
@@ -36,6 +56,7 @@ REPLACE THIS TEXT WITH YOUR RESPONSE
 
 How do frequentist and Bayesian statistics compare?
 
-REPLACE THIS TEXT WITH YOUR RESPONSE
+> Frequentists would use multiple data samples to measure how they fit a given hypothesis. 
+> Bayesians would use one data sample to measure the probability of varying hypotheses.
 
 ---
