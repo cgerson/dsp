@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env 
+
+>>>>>>> 0ba19ca1241f21cfaefc8ccda555dfbe3d54ae89
 import random
 import sys
 
@@ -85,3 +90,7 @@ if __name__ == "__main__":
         sys.exit(1)
     # else
     main()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0ba19ca1241f21cfaefc8ccda555dfbe3d54ae89
