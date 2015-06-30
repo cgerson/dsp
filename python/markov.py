@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 #!/usr/bin/env 
 
->>>>>>> 0ba19ca1241f21cfaefc8ccda555dfbe3d54ae89
 import random
 import sys
 
@@ -33,15 +30,17 @@ def database(words):
     if len(words) < 3:
         return
                 
-    for i in range(len(words) - 2):
-        first,second,third = (words[i], words[i+1], words[i+2])
-                        
+    for i,word in enumerate(words):
+        try:
+            first,second,third = (words[i], words[i+1], words[i+2])
+        except IndexError:
+            break
         key = (first,second)
         if key not in d:
             d[key] = []
         d[key].append(third)
                         
-        return d
+    return d
                                 
 def generate_markov_text(d, size=40):
 
@@ -59,18 +58,17 @@ def generate_markov_text(d, size=40):
     li.append(first)
     li.append(second)
     
-    while len(li)<size:
-        try:
-            third = random.choice(d[key])
-        except KeyError:
-            break
-        li.append(third)
-        if third[-1] in EOS:
-            break
-        key = (second, third)
-        first, second = key
+    while True:
+        while len(li)<size:
+            try:
+                third = random.choice(d[key])
+            except KeyError:
+                break
+            li.append(third)
+            key = (second, third)
+            first, second = key
     
-    return ' '.join(li)
+        return ' '.join(li)
 
 def main():
 
@@ -90,7 +88,4 @@ if __name__ == "__main__":
         sys.exit(1)
     # else
     main()
-<<<<<<< HEAD
-=======
 
->>>>>>> 0ba19ca1241f21cfaefc8ccda555dfbe3d54ae89

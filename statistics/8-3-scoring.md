@@ -10,10 +10,13 @@ Problem: [Think Stats Chapter 8 Exercise 3](http://greenteapress.com/thinkstats2
 ##### SimulateGame function takes goal-scoring rate lam, and simulates a 90 minute game
 ##### Returns total goals 
     def SimulateGame(lam = 2):
-        total_time = 90
-        sim_game = np.random.exponential(1.0/lam,total_time)
-        L = 1/np.mean(sim_game)
-        return L
+    	time_of_goals =[]
+    	goals = 0
+    	while time<90:
+              sim_goals = random.expovariate(1.0/lam)
+              goals+=1
+              time = time + sim_goals
+    	print "Goals: "+str(goals)
     
 ##### SumlateGames function simulates many games
 ##### Plots sample distribution
